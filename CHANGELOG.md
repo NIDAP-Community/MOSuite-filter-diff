@@ -1,6 +1,6 @@
 # Code Ocean capsule - MOSuite - filter differential expression results
 
-## development version
+## v2.0
 
 - Standardize app panel across MOSuite capsules.
 - Fix: remove `regex_moo` parameter from configuration. multiOmicDataSet input files are now required to follow the standardized naming pattern (`.*\.rds$`).
