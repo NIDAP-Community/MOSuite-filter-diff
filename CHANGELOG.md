@@ -4,6 +4,7 @@
 
 - Standardize app panel across MOSuite capsules.
 - Fix: remove `regex_moo` parameter from configuration. multiOmicDataSet input files are now required to follow the standardized naming pattern (`.*\.rds$`).
+- Use MOSuite v0.3.0.
 
 ## v1.0
 
