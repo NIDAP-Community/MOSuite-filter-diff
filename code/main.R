@@ -1,5 +1,4 @@
 #!/usr/bin/env Rscript
-rlang::global_entrace()
 library(argparse)
 library(glue)
 library(MOSuite)
@@ -67,4 +66,4 @@ moo |>
         plot_type = args$plot_type,
         plot_titles_fontsize = args$plot_titles_fontsize
         ) |> 
-    write_rds(file.path(getOption("moo_plots_dir"), "..", "moo", "moo.rds"))
+    write_rds(file.path(getOption("moo_plots_dir"), "..", "moo", "moo-diff-filt.rds"))
