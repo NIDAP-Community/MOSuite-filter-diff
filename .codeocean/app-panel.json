@@ -24,12 +24,6 @@
 			"icon": "📂"
 		},
 		{
-			"id": "FvI4Z2eb9sjL47Jt",
-			"name": "Advanced",
-			"description": "Advanced parameters",
-			"icon": "📂"
-		},
-		{
 			"id": "VisGeneral",
 			"name": "Visualization: General",
 			"description": "General visualization and plotting options",
@@ -46,6 +40,12 @@
 			"name": "Visualization: Pie Chart",
 			"description": "Pie chart visualization options",
 			"icon": "\ud83d\udcca"
+		},
+		{
+			"id": "FvI4Z2eb9sjL47Jt",
+			"name": "Advanced",
+			"description": "Advanced parameters",
+			"icon": "📂"
 		}
 	],
 	"parameters": [
