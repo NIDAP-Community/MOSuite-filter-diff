@@ -124,9 +124,13 @@
 			"name": "Round estimates",
 			"param_name": "round_estimates",
 			"description": "Whether to round estimates",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "TRUE"
+			"default_value": "TRUE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "m9K2pX4bV7nT1eR6",
@@ -222,9 +226,13 @@
 			"name": "Pie chart in 3D",
 			"param_name": "pie_chart_in_3d",
 			"description": "Whether to draw pie charts in 3D",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "TRUE"
+			"default_value": "TRUE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "B6tQ1pV8mR3xN2cL",
@@ -242,9 +250,13 @@
 			"name": "Draw bar border",
 			"param_name": "draw_bar_border",
 			"description": "Whether to draw borders around bars",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "TRUE"
+			"default_value": "TRUE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "Y4nR2pX7mL1vQ6cT",
