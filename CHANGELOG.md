@@ -1,5 +1,9 @@
 # Code Ocean capsule - MOSuite - filter differential expression results
 
+## Development version
+
+- Improved the Code Ocean parameter UI for the filter diff capsule (#2).
+
 ## v2.0
 
 - Standardize app panel across MOSuite capsules.
