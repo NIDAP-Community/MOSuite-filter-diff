@@ -3,6 +3,7 @@
 ## Development version
 
 - Improved the Code Ocean parameter UI for the filter diff capsule (#2, @phoman14).
+- Use MOSuite v0.3.2. (#3, @kelly-sovacool)
 
 ## v2.0
 
