@@ -54,7 +54,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Feature ID column name",
 			"param_name": "feature_id_colname",
-			"description": "Column name for feature IDs",
+			"description": "The column from the counts data containing the Feature IDs, usually Gene or Protein ID. This is usually the first column of the input counts matrix. Only columns of text type from the input counts matrix are available to select for this parameter.",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -63,7 +63,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Significance column",
 			"param_name": "significance_column",
-			"description": "Column name for significance (e.g., pval or adjpval)",
+			"description": "Column name for significance, such as pval or adjpval.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "adjpval"
@@ -73,7 +73,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Significance cutoff",
 			"param_name": "significance_cutoff",
-			"description": "Features must be below this significance cutoff",
+			"description": "Features are kept only if their significance_column value is less than this cutoff threshold.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "0.05"
@@ -83,7 +83,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Change column",
 			"param_name": "change_column",
-			"description": "Column name for change (e.g., logFC)",
+			"description": "Column name for change, such as logFC.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "logFC"
@@ -93,7 +93,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Change cutoff",
 			"param_name": "change_cutoff",
-			"description": "Absolute change threshold",
+			"description": "Features are kept only if the absolute value of their change_column value is greater than or equal to this cutoff threshold.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "1"
@@ -103,7 +103,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Filtering mode",
 			"param_name": "filtering_mode",
-			"description": "Include features meeting criteria in any or all contrasts (any/all)",
+			"description": "Accepted values are any or all, to include features that meet the criteria in any contrast or in all contrasts.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "any"
@@ -113,7 +113,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Include estimates",
 			"param_name": "include_estimates",
-			"description": "Comma-separated list of estimates to include",
+			"description": "Column names of estimates to include.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "FC,logFC,tstat,pval,adjpval"
@@ -123,7 +123,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Round estimates",
 			"param_name": "round_estimates",
-			"description": "Whether to round estimates",
+			"description": "Whether to round estimates.",
 			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
@@ -137,7 +137,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Contrast filter",
 			"param_name": "contrast_filter",
-			"description": "Whether to keep, remove, or ignore contrast filtering",
+			"description": "Whether to filter contrasts in or out of analysis. If keep, only the contrast names listed in contrasts are included. If remove, the contrast names listed by contrasts are removed. If none, all contrasts in the dataset are used.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "none"
@@ -147,7 +147,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Contrasts",
 			"param_name": "contrasts",
-			"description": "Comma-separated list of contrasts to keep/remove",
+			"description": "Contrast names to filter by contrast_filter. If contrast_filter is none, this parameter has no effect.",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -156,7 +156,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Groups",
 			"param_name": "groups",
-			"description": "Comma-separated list of groups to keep/remove",
+			"description": "Group names to filter by groups_filter. If groups_filter is none, this parameter has no effect.",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -165,7 +165,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Groups filter",
 			"param_name": "groups_filter",
-			"description": "Whether to keep, remove, or ignore group filtering",
+			"description": "Whether to filter groups in or out of analysis. If keep, only the group names listed in groups are included. If remove, the group names listed by groups are removed. If none, all groups in the dataset are used.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "none"
@@ -175,7 +175,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Rounding decimals for percent",
 			"param_name": "rounding_decimal_for_percent_cells",
-			"description": "Decimal places for percent labels",
+			"description": "Decimal place to use when rounding Percent cells.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "0"
@@ -185,7 +185,7 @@
 			"category": "VisGeneral",
 			"name": "Label font size",
 			"param_name": "label_font_size",
-			"description": "Font size for labels in plots",
+			"description": "Font size for labels in the plot.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "6"
@@ -195,7 +195,7 @@
 			"category": "VisGeneral",
 			"name": "Label distance",
 			"param_name": "label_distance",
-			"description": "Distance of labels from bars",
+			"description": "Distance of labels from the bars.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "1"
@@ -205,7 +205,7 @@
 			"category": "VisBarChart",
 			"name": "Y-axis expansion",
 			"param_name": "y_axis_expansion",
-			"description": "Expansion of the y-axis",
+			"description": "Expansion of the y-axis.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "0.08"
@@ -215,7 +215,7 @@
 			"category": "VisGeneral",
 			"name": "Fill colors",
 			"param_name": "fill_colors",
-			"description": "Comma-separated fill colors for bars",
+			"description": "Fill colors for the bars.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "steelblue1,whitesmoke"
@@ -225,7 +225,7 @@
 			"category": "VisPieChart",
 			"name": "Pie chart in 3D",
 			"param_name": "pie_chart_in_3d",
-			"description": "Whether to draw pie charts in 3D",
+			"description": "Whether to draw pie charts in 3D.",
 			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
@@ -239,7 +239,7 @@
 			"category": "VisBarChart",
 			"name": "Bar width",
 			"param_name": "bar_width",
-			"description": "Width of bars",
+			"description": "Width of the bars.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "0.4"
@@ -249,7 +249,7 @@
 			"category": "VisBarChart",
 			"name": "Draw bar border",
 			"param_name": "draw_bar_border",
-			"description": "Whether to draw borders around bars",
+			"description": "Whether to draw borders around bars.",
 			"type": "list",
 			"value_type": "string",
 			"default_value": "TRUE",
@@ -263,7 +263,7 @@
 			"category": "VisGeneral",
 			"name": "Plot type",
 			"param_name": "plot_type",
-			"description": "Plot type: bar or pie",
+			"description": "Plot type, either bar or pie.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "bar"
@@ -273,7 +273,7 @@
 			"category": "VisGeneral",
 			"name": "Plot titles fontsize",
 			"param_name": "plot_titles_fontsize",
-			"description": "Font size for plot titles",
+			"description": "Font size for plot titles.",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "12"
