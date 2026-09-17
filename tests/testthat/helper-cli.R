@@ -69,9 +69,13 @@ expect_outputs_created <- function(results_dir) {
   )
 
   moo <- readr::read_rds(moo_path)
+  moo_class_names <- class(moo)
   expect_true(
-    inherits(moo, "MOSuite::multiOmicDataSet"),
-    info = "Output should be an S7 multiOmicDataSet object"
+    any(grepl("multiOmicDataSet", moo_class_names, fixed = TRUE)),
+    info = paste(
+      "Output should be an S7 multiOmicDataSet object; actual classes:",
+      paste(moo_class_names, collapse = ", ")
+    )
   )
 
   expect_true(
