@@ -22,11 +22,15 @@ setup_cli_workspace <- function(prefix = "mosuite_filter_diff_test_") {
     info = paste("Test data file should exist at", test_data_file)
   )
 
-  file.copy(
-    test_data_file,
-    file.path(data_dir, "moo.rds"),
-    overwrite = TRUE
-  )
+  moo <- readr::read_rds(test_data_file)
+  for (count_name in names(moo@counts)) {
+    counts_df <- as.data.frame(moo@counts[[count_name]])
+    if (!is.null(counts_df) && nrow(counts_df) > 1000L) {
+      counts_df <- counts_df[seq_len(1000L), , drop = FALSE]
+      moo@counts[[count_name]] <- counts_df
+    }
+  }
+  readr::write_rds(moo, file.path(data_dir, "moo.rds"))
 
   file.copy(
     file.path(repo_root, "code", "main.R"),
