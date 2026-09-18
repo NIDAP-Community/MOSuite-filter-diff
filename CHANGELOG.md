@@ -1,6 +1,6 @@
 # Code Ocean capsule - MOSuite - filter differential expression results
 
-## Development version
+## v3.0
 
 - Use MOSuite v0.5.0. (#9, @kelly-sovacool)
 - Sync Code Ocean app panel parameter descriptions with MOSuite package documentation for MOSuite v0.4.1 (#6, @phoman14).
