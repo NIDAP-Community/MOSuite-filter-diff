@@ -11,6 +11,15 @@ setup_capsule_environment()
 
 # parse CLI arguments
 parser <- ArgumentParser()
+source("deg-input.R")
+parser$add_argument(
+  "--input_type", default = "auto", choices = c("auto", "moo", "table"),
+  help = "Auto prefers a unique MOO, otherwise DEG_Analysis.csv; or choose moo/table"
+)
+parser$add_argument(
+  "--input_file", default = "",
+  help = "Optional explicit MOO RDS or DEG CSV/TSV/TXT path"
+)
 
 parser$add_argument(
   "--feature_id_colname",
@@ -148,10 +157,11 @@ parser$add_argument(
 args <- parser$parse_args()
 
 # load multiOmicDataSet from data directory
-moo <- load_moo_from_data_dir()
+moo <- load_deg_input(args$input_type, args$input_file, args$feature_id_colname)
+if (is.data.frame(moo)) moo <- deg_table_to_moo(moo, args$feature_id_colname)
 
 # run MOSuite
-moo |>
+filtered_moo <- moo |>
   filter_diff(
     feature_id_colname = args$feature_id_colname,
     significance_column = args$significance_column,
@@ -175,10 +185,14 @@ moo |>
     draw_bar_border = args$draw_bar_border,
     plot_type = args$plot_type,
     plot_titles_fontsize = args$plot_titles_fontsize
-  ) |>
-  write_rds(file.path(
+  )
+write_rds(filtered_moo, file.path(
     getOption("moo_plots_dir"),
     "..",
     "moo",
     "moo-diff-filt.rds"
   ))
+write_csv(
+  filtered_moo@analyses$diff_filt,
+  file.path(getOption("moo_plots_dir"), "..", "moo", "DEG_Analysis_Filtered.csv")
+)

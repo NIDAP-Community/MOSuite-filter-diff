@@ -33,6 +33,10 @@ setup_cli_workspace <- function(prefix = "mosuite_filter_diff_test_") {
   readr::write_rds(moo, file.path(data_dir, "moo.rds"))
 
   file.copy(
+    file.path(repo_root, "code", "deg-input.R"),
+    file.path(code_dir, "deg-input.R")
+  )
+  file.copy(
     file.path(repo_root, "code", "main.R"),
     file.path(code_dir, "main.R"),
     overwrite = TRUE

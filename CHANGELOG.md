@@ -2,6 +2,13 @@
 
 ## development version
 
+- Accept OMIX DEG CSV/TSV/TXT alongside MOO input, with explicit input
+  type/file controls and MOO-first automatic discovery.
+- Wrap tables in an analysis-only MOO without fabricated counts; preserve the
+  existing filtering function and MOO output.
+- Emit DEG_Analysis_Filtered.csv alongside moo-diff-filt.rds for both routes.
+- Add any/all, boundary and MOO/table CLI parity tests; managed source is unchanged.
+
 ## v3.0
 
 - Use MOSuite v0.5.0. (#9, @kelly-sovacool)
