@@ -8,17 +8,11 @@
 	"datasets": [
 		{
 			"id": "82dccbec-cdd6-4d7f-a610-9cea832e4a8f",
-			"name": "DEG results (MOO or DEG_Analysis.csv)",
-			"description": "Attach MOSuite DEG MOO output or OMIX DEG_Analysis.csv. Metadata and expression/count tables alone are not DEG inputs."
+			"name": "Differential expression results",
+			"description": "Attach a MOSuite DEG result or a CSV named DEG_Analysis.csv. The capsule detects the supported input automatically."
 		}
 	],
 	"categories": [
-		{
-			"id": "7Rr6IxOMDucKMImp",
-			"name": "Input Data Parameters",
-			"description": "Options for defining input data",
-			"icon": "📁"
-		},
 		{
 			"id": "EzTg1ivlFDHEy9PI",
 			"name": "Basic",
@@ -50,26 +44,6 @@
 		}
 	],
 	"parameters": [
-		{
-			"id": "input_type",
-			"category": "7Rr6IxOMDucKMImp",
-			"name": "Input type",
-			"param_name": "input_type",
-			"description": "Auto prefers exactly one MOO RDS; otherwise it discovers DEG_Analysis.csv/tsv/txt. Select table to use CSV when both formats are attached. Ambiguous inputs require an explicit file.",
-			"type": "list",
-			"value_type": "string",
-			"default_value": "auto",
-			"extra_data": ["auto", "moo", "table"]
-		},
-		{
-			"id": "input_file",
-			"category": "7Rr6IxOMDucKMImp",
-			"name": "Input file (optional)",
-			"param_name": "input_file",
-			"description": "Select one MOO RDS or DEG CSV/TSV/tab-delimited TXT explicitly. Leave blank for discovery.",
-			"type": "file",
-			"value_type": "string"
-		},
 		{
 			"id": "w1kntbu7DvR0ABp2",
 			"category": "FvI4Z2eb9sjL47Jt",

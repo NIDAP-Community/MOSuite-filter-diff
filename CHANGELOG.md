@@ -2,8 +2,10 @@
 
 ## development version
 
-- Accept OMIX DEG CSV/TSV/TXT alongside MOO input, with explicit input
-  type/file controls and MOO-first automatic discovery.
+- Accept MOO RDS or the specifically named `DEG_Analysis.csv`, automatically
+  preferring MOO when both formats are present.
+- Keep input discovery controls out of the user-facing panel and restore the
+  capsule's concise README.
 - Wrap tables in an analysis-only MOO without fabricated counts; preserve the
   existing filtering function and MOO output.
 - Emit DEG_Analysis_Filtered.csv alongside moo-diff-filt.rds for both routes.

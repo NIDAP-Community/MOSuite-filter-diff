@@ -12,14 +12,6 @@ setup_capsule_environment()
 # parse CLI arguments
 parser <- ArgumentParser()
 source("deg-input.R")
-parser$add_argument(
-  "--input_type", default = "auto", choices = c("auto", "moo", "table"),
-  help = "Auto prefers a unique MOO, otherwise DEG_Analysis.csv; or choose moo/table"
-)
-parser$add_argument(
-  "--input_file", default = "",
-  help = "Optional explicit MOO RDS or DEG CSV/TSV/TXT path"
-)
 
 parser$add_argument(
   "--feature_id_colname",
@@ -157,7 +149,7 @@ parser$add_argument(
 args <- parser$parse_args()
 
 # load multiOmicDataSet from data directory
-moo <- load_deg_input(args$input_type, args$input_file, args$feature_id_colname)
+moo <- load_deg_input(args$feature_id_colname)
 if (is.data.frame(moo)) moo <- deg_table_to_moo(moo, args$feature_id_colname)
 
 # run MOSuite
