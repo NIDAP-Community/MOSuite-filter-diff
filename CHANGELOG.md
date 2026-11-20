@@ -2,6 +2,15 @@
 
 ## development version
 
+- Accept MOO RDS or the specifically named `DEG_Analysis.csv`, automatically
+  preferring MOO when both formats are present. (#11)
+- Keep input discovery controls out of the user-facing panel and restore the
+  capsule's concise README.
+- Wrap tables in an analysis-only MOO without fabricated counts; preserve the
+  existing filtering function and MOO output.
+- Emit DEG_Analysis_Filtered.csv alongside moo-diff-filt.rds for both routes.
+- Add any/all, boundary and MOO/table CLI parity tests; managed source is unchanged.
+
 ## v3.0
 
 - Use MOSuite v0.5.0. (#9, @kelly-sovacool)

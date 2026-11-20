@@ -8,16 +8,11 @@
 	"datasets": [
 		{
 			"id": "82dccbec-cdd6-4d7f-a610-9cea832e4a8f",
-			"name": "multiOmicDataSet"
+			"name": "Differential expression results",
+			"description": "Attach a MOSuite DEG result or a CSV named DEG_Analysis.csv. The capsule detects the supported input automatically."
 		}
 	],
 	"categories": [
-		{
-			"id": "7Rr6IxOMDucKMImp",
-			"name": "Input Data Parameters",
-			"description": "Options for defining input data",
-			"icon": "📁"
-		},
 		{
 			"id": "EzTg1ivlFDHEy9PI",
 			"name": "Basic",
